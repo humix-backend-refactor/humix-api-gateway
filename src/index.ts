@@ -4,10 +4,14 @@ import cors from 'cors'
 
 import logger from './config/logger'
 
+import { proxyServices } from './config/services'
+
 const app = express()
 
 app.use(helmet())
 app.use(cors())
+
+proxyServices(app)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     logger.debug(`${req.method} ${req.url}`)
