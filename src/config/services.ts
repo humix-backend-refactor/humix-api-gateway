@@ -6,7 +6,7 @@ class ServiceProxy {
     private static readonly serviceConfigs = [
         {
             path: '/api/teste',
-            url: 'humix-srv-teste.teste.svc.cluster.local:8080',
+            url: 'http://humix-srv-teste.teste.svc.cluster.local:8080',
             pathRewrite: {'^/': '/health'},
             name: 'humix-srv-teste',
             timeout: 5000
