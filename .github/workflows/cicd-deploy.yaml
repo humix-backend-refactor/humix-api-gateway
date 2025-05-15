@@ -18,7 +18,7 @@ jobs:
               with:
                 username: blgianini
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
-                repository: blgianini/canal-deploy
+                repository: blgianini/humix
                 tags: ${{ github.sha }}, latest
 
     deploy:
@@ -44,7 +44,7 @@ jobs:
               run: |
                 ls
                 cd kubernetes
-                kustomize edit set image imagem=blgianini/canal-deploy:${{ github.sha }}
+                kustomize edit set image imagem=blgianini/humix:${{ github.sha }}
 
             - name: Criando commit tag da imagem
               run: |
