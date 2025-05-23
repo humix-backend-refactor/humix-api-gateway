@@ -13,7 +13,7 @@ class ServiceProxy {
         },
 
         {
-            path: '/api/teste/register',
+            path: '/api/user/register',
             url: 'http://humix-srv-teste.teste.svc.cluster.local:8080',
             pathRewrite: {'^/': '/register'},
             name: 'humix-srv-teste',
