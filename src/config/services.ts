@@ -7,15 +7,7 @@ class ServiceProxy {
         {
             path: '/api/teste',
             url: 'http://humix-srv-teste.teste.svc.cluster.local:8080',
-            pathRewrite: {'^/': '/health'},
-            name: 'humix-srv-teste',
-            timeout: 5000
-        },
-
-        {
-            path: '/api/user/register',
-            url: 'http://humix-srv-teste.teste.svc.cluster.local:8080',
-            pathRewrite: {'^/': '/register'},
+            pathRewrite: {'^/': '/'},
             name: 'humix-srv-teste',
             timeout: 5000
         }
