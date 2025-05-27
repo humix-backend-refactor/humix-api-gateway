@@ -10,7 +10,14 @@ class ServiceProxy {
             pathRewrite: {'^/': '/'},
             name: 'humix-srv-teste',
             timeout: 5000
-        }
+        },
+        {
+            path: '/api/album',
+            url: 'http://humix-srv-album.album.svc.cluster.local:8080',
+            pathRewrite: {'^/': '/'},
+            name: 'humix-srv-album',
+            timeout: 5000
+        },
     ]
 
 
